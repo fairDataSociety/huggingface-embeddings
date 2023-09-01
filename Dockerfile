@@ -20,5 +20,5 @@ COPY . /app/
 # Expose the port that the Flask app will run on
 EXPOSE 9876
 
-# Start the Flask application directly (without Gunicorn)
-CMD ["python", "app.py"]
+# Start the Flask application directly
+CMD ["python", "app.py", "--model-name", "sentence-transformers/all-MiniLM-L6-v2"]

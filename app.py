@@ -1,11 +1,24 @@
 from flask import Flask, request, jsonify
 from transformers import AutoTokenizer, AutoModel
 import torch
+import argparse
+
+# Create an argument parser
+parser = argparse.ArgumentParser(description='Text Vectorization Server')
+
+# Add an argument for the model name with a default value
+parser.add_argument('--model-name', type=str, default='sentence-transformers/all-MiniLM-L6-v2',
+                    help='Name of the Hugging Face model to use')
+
+# Parse the command-line arguments
+args = parser.parse_args()
+
+# Use args.model_name to access the model name
+model_name = args.model_name
 
 app = Flask(__name__)
 
 # Load the pre-trained model and tokenizer
-model_name = "sentence-transformers/all-MiniLM-L6-v2"  # You can replace this with any Hugging Face model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModel.from_pretrained(model_name)
 

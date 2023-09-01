@@ -31,7 +31,7 @@ These instructions will help you set up and run the server on your local machine
 To run the server locally, execute the following command:
 
 ```bash
-    python app.py
+    python app.py --model-name sentence-transformers/all-MiniLM-L6-v2
 ```
 
 By default, the server will listen on port 9876. You can customize the port by modifying the code in `app.py`.
@@ -47,7 +47,7 @@ You can also run the server in a Docker container. First, build the Docker image
 Run the container:
 
 ```bash
-    docker run -p 9876:9876 onepeerlabs/huggingface-embeddings
+    docker run -p 9876:9876 onepeerlabs/huggingface-embeddings --model-name sentence-transformers/all-MiniLM-L6-v2
 ```
 
 ### API Endpoints
