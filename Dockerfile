@@ -1,10 +1,6 @@
 # Use an official Python runtime as a parent image
 FROM python:3.9
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
 # Create and set the working directory
 WORKDIR /app
 
