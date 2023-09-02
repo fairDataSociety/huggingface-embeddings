@@ -17,4 +17,4 @@ COPY . /app/
 EXPOSE 9876
 
 # Start the Flask application directly
-CMD ["python", "app.py", "--model-name", "sentence-transformers/all-MiniLM-L6-v2"]
+ENTRYPOINT ["python", "app.py"]
