@@ -1,6 +1,6 @@
 # Server for Text Vectorization
 
-This is a Python server that uses the Hugging Face Transformers library to convert text into embeddings and returns the embeddings as JSON. Additionally, it supports quantization of embeddings.
+This is a Python server that uses the Hugging Face Transformers library to convert text into embeddings and returns the embeddings as JSON. 
 
 ## Getting Started
 
