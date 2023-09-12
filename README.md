@@ -16,8 +16,8 @@ These instructions will help you set up and run the server on your local machine
 1. Clone the repository:
 
 ```bash
-   git clone https://github.com/onepeerlabs/huggingface-embeddings.git
-   cd your-server
+   git clone https://github.com/fairDataSociety/huggingface-vectorizer.git
+   cd huggingface-vectorizer
 ```
 
 2. Install the required Python packages:
@@ -41,13 +41,13 @@ By default, the server will listen on port 9876. You can customize the port by m
 You can also run the server in a Docker container. First, build the Docker image:
 
 ```bash
-    docker build -t onepeerlabs/huggingface-embeddings .
+    docker build -t fairdatasociety/huggingface-vectorizer .
 ```
 
 Run the container:
 
 ```bash
-    docker run -p 9876:9876 onepeerlabs/huggingface-embeddings --model-name sentence-transformers/all-MiniLM-L6-v2
+    docker run -p 9876:9876 fairdatasociety/huggingface-vectorizer --model-name sentence-transformers/all-MiniLM-L6-v2
 ```
 
 ### API Endpoints
